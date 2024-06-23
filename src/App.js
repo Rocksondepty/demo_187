@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-/*import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
-*/
+
 import './App.css';
 
 //import { useStateContext } from './contexts/ContextProvider';
@@ -20,10 +20,12 @@ const activeMenu = true;
       setCurrentColor(currentThemeColor);
       setCurrentMode(currentThemeMode);
     }
-  }, []);*/
+  }, []);
+  1st div after return className={currentMode === 'Dark' ? 'dark' : ''}
+  */
 
   return (
-    <div className={currentMode === 'Dark' ? 'dark' : ''}>
+    <div >
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
         <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -33,9 +35,10 @@ const activeMenu = true;
           >
             <button
               type="button"
-              onClick={() => setThemeSettings(true)}
-              style={{ background: currentColor, borderRadius: '50%' }}
-              className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+              //onClick={() => setThemeSettings(true)}
+             // style={{ background: currentColor, borderRadius: '50%' }}
+             style={{ background: 'blue', borderRadius: '50%' }} 
+             className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
             >
               <FiSettings />
             </button>
@@ -62,7 +65,7 @@ const activeMenu = true;
             <Navbar />
           </div>
           <div>
-            {themeSettings && (<ThemeSettings />)}
+  {/*{themeSettings && (<ThemeSettings />)}*/}  
 
             <Routes>
               {/* dashboard  */}
